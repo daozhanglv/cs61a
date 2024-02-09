@@ -25,6 +25,7 @@ _NAMES = {
     'FloorDiv': '//',
     'For': 'for',
     'FunctionDef': 'def',
+    'Filter': 'filter',
     'GeneratorExp': '(... for ...)',
     'Global': 'global',
     'Gt': '>',
