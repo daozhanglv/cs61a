@@ -28,13 +28,9 @@ def scale(it, multiplier):
     [2, 4, 6, 8, 10]
     """
     "*** YOUR CODE HERE ***"
-    it = iter(it)
-    cur = next(it)
-    if type(cur) == int:
-        yield cur * multiplier
-    else:
-        yield cur * multiplier
-        yield from scale(it, multiplier)
+    for i in it:
+        yield i * multiplier
+
 
 def hailstone(n):
     """
@@ -50,4 +46,12 @@ def hailstone(n):
     1
     """
     "*** YOUR CODE HERE ***"
+    yield n
+    if n == 1:
+        return
+    else:
+        if n % 2 == 0:
+            yield from hailstone(n // 2)
+        else:
+            yield from hailstone(n * 3 + 1)
 
